@@ -34,12 +34,12 @@ int main(int arc, char * argv[])
 
     if (f == nullptr)
     {
-        printf("\n\n Can't open the file");
+        printf("\n\n Nie mozna otworzyć pliku!");
         return -1;
     }
     else
     {
-        printf("\n\n File f opened!");
+        printf("\n\n Plik f otworzony!");
     }
 
     printf("\n INFORMACJE O BITMAPIE\n\n");
