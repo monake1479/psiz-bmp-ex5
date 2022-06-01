@@ -60,6 +60,21 @@ int main(int arc, char * argv[])
     printf("\n Pozycja danych obrazkowych: %d", File.bfOffBits);
 
     printf("\n");
+
+    fseek(f, 14, SEEK_SET);
+    fread(&Picture.biSize, sizeof(Picture.biSize), 1, f);
+    printf("\n Wielkosc naglowka informacyjnego: %d", Picture.biSize);
+
+    fread(&Picture.biWidth, sizeof(Picture.biWidth), 1, f);
+    printf("\n Szerokosc: %d pikseli", Picture.biWidth);
+
+    fread(&Picture.biHeight, sizeof(Picture.biHeight), 1, f);
+    printf("\n Wysokosc: %d pikseli", Picture.biHeight);
+
+    fread(&Picture.biPlanes, sizeof(Picture.biPlanes), 1, f);
+    printf("\n Liczba platow: %d", Picture.biPlanes);
+
+    
 }
 
 
